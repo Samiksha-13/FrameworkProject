@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+
+    <test verbose="2" preserve-order="true" name="ChromeTest">
+        <parameter name="OS" value="Windows"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.TC01_AccountRegistrationTest">
+                <methods>
+                    <include name="verifyAccountRegistration"/>
+                </methods>
+            </class>
+            <class name="testCases.TC02_LoginTest">
+                <methods>
+                    <include name="verify_login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true" name="EdgeTest">
+        <parameter name="OS" value="Windows"></parameter>
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="testCases.TC01_AccountRegistrationTest">
+                <methods>
+                    <include name="verifyAccountRegistration"/>
+                </methods>
+            </class>
+            <class name="testCases.TC02_LoginTest">
+                <methods>
+                    <include name="verify_login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
